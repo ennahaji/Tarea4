@@ -23,7 +23,7 @@ JTextField loc=new JTextField(25);
 
 
 JLabel mensaje=new JLabel(" ----------------------------- ");
-JLabel titulo=new JLabel ("GESTIÓN DE DEPARTAMENTOS.");
+JLabel titulo=new JLabel ("GESTION DE DEPARTAMENTOS.");
 
 JLabel lnum = new JLabel ("NUMERO DEPARTAMENTO:");
 JLabel lnom = new JLabel ("NOMBRE:");
@@ -37,8 +37,11 @@ JButton modif=new JButton("Modificar Departamento.");
 JButton ver=new JButton("Ver por consola.");
 JButton fin=new JButton("CERRAR");
 Color c; //para poner colores
+
+
+
 private String existedepart;
- // WHITE,LIGHTGRAY,GRAY,DARKGRAY,BLUE,BLACK,RED,MAGENTA,PINK,ORANGE,CYAN,GREEN,YELLOW
+
 private String depar_error;
 
 public VentanaDepart(JFrame f )
@@ -184,7 +187,7 @@ private void borradepart() {
 		      if (consultar(dep))
 		       { mensaje.setText(existedepart);   
 		         visualiza(dep);
-		         confirm=JOptionPane.showConfirmDialog(this, "ESTÁS SEGURO DE BORRAR...", "AVISO BORRADO.", 
+		         confirm=JOptionPane.showConfirmDialog(this, "ESTAS SEGURO DE BORRAR...", "AVISO BORRADO.", 
 		        		     JOptionPane.OK_CANCEL_OPTION);	  
 		           // si devuelve 0 es OK
 		           //mensaje.setText(" has pulsado el boton Borrar "+ confirm);   
@@ -282,7 +285,7 @@ public  void verporconsola() throws IOException {
 	System.out.println(" ------------------------------------------");  
 	}
   else  //esto s�lo sale la primera vez
-		System.out.println(" ---------FICHERO VACÍO --------------------");
+		System.out.println(" ---------FICHERO VACIO --------------------");
 }// fin verporconsola
 
 boolean consultar(int dep) throws IOException 
@@ -365,6 +368,7 @@ void borrar(int dep)
 			e1.printStackTrace();
 		}	
 } // fin borrar
+
 void modificar(int dep) 
 {	    // con modificar asignamos los datos tecleados
 	    String nom="",loca="";  StringBuffer buffer = null;
@@ -392,6 +396,7 @@ void modificar(int dep)
 			e1.printStackTrace();
 		}	
 } // fin modificar
+
 void grabar(int dep, String nom, String loc) 
 {	 
 		long pos; StringBuffer buffer = null;
